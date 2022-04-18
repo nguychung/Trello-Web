@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Author: Nguy Manh Chung
+
+### Setup env :
+### nodejs >= v14.7.0
+### npm >= v6.14.7
+### yarn >= v1.19.1
+
+
 ## Available Scripts
 
 In the project directory, you can run:
