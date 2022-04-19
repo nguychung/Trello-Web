@@ -1,20 +1,26 @@
 import React from "react";
 import "./Column.scss";
-import Task from "../Task/Task";
-const Column = () => {
+import Card from "../Card/Card";
+const Column = (props) => {
+  const { column } = props;
+
+  const cards = column.cards;
   return (
     <div className="column">
-      <header>Brainstorm</header>
-      <ul className="task-list">
-        <Task />
-        <li className="task-item">Add what you'd like to work on below</li>
-        <li className="task-item">Add what you'd like to work on below</li>
-        <li className="task-item">Add what you'd like to work on below</li>
-        <li className="task-item">Add what you'd like to work on below</li>
-        <li className="task-item">Add what you'd like to work on below</li>
-        <li className="task-item">Add what you'd like to work on below</li>
-        <li className="task-item">Add what you'd like to work on below</li>
-        <li className="task-item">Add what you'd like to work on below</li>
+      <header>{column.title}</header>
+      <ul className="card-list">
+        {cards.map((card, index) => (
+          <Card key={card.id} card={card} />
+        ))}
+        <Card />
+        <li className="card-item">Add what you'd like to work on below</li>
+        <li className="card-item">Add what you'd like to work on below</li>
+        <li className="card-item">Add what you'd like to work on below</li>
+        <li className="card-item">Add what you'd like to work on below</li>
+        <li className="card-item">Add what you'd like to work on below</li>
+        <li className="card-item">Add what you'd like to work on below</li>
+        <li className="card-item">Add what you'd like to work on below</li>
+        <li className="card-item">Add what you'd like to work on below</li>
       </ul>
       <footer>Add another card</footer>
     </div>
