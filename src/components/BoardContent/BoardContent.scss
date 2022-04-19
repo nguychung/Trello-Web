@@ -1,0 +1,30 @@
+@import '../../setting';
+
+$list-bg-color : #ebecf0;
+$column-header-height: 46px;
+$column-footer-height: 46px;
+$column-border-radius: 8px;
+$card-border-radius: 4px;
+
+
+.board-content {
+    display: flex;
+    margin: 0 $gap $gap;
+    overflow-x: auto; // neu column or text tran` theo chieu ngang or doc thi xuat hien thanh cuon scroll
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      // vertaical: theo chieu doc. , hiểu là set độ dày thanh scroll
+      height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      // hàm draken dùng để là tối màu nào đó
+      background-color: $common-element-bg;
+      border-radius: 8px;
+    }
+
+  }
